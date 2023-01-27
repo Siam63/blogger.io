@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Nav from '@/components/Nav'
+import handler from './api/hello';
 
 function Billing() {
     const [billType, setBillType] = useState();
@@ -12,21 +13,21 @@ function Billing() {
                 <div className="flex justify-center">
                     <div className="flex flex-col">
                         <div className="py-2">
-                            <input type="radio" name="billType" value="Bronze" onChange={e => setBillType(e.target.value)}/>
+                            <input type="radio" name="billType" value="$0.00 CAD" onChange={e => setBillType(e.target.value)}/>
                             <span className="ml-2 font-semibold text-xl">Bronze Membership</span>
                         </div>
                         <div className="py-2">
-                            <input type="radio" name="billType" value="Gold" onChange={e => setBillType(e.target.value)}/>
+                            <input type="radio" name="billType" value="$10.00 CAD" onChange={e => setBillType(e.target.value)}/>
                             <span className="ml-2 font-semibold text-xl">Gold Membership</span>
                         </div>
                         <div className="py-2">
-                            <input type="radio" name="billType" value="Diamond" onChange={e => setBillType(e.target.value)}/>
+                            <input type="radio" name="billType" value="$15.00 CAD" onChange={e => setBillType(e.target.value)}/>
                             <span className="ml-2 font-semibold text-xl">Diamond Membership</span>
                         </div>
                     </div>
                 </div>
                 <div className="pt-5">
-                    <h1>{billType} Membership</h1>
+                    <h1>TOTAL: {billType}</h1>
                 </div>
             </div>
             
