@@ -1,7 +1,10 @@
 import React from 'react';
 import { AiFillCrown } from 'react-icons/ai'
+import { useSession, signIn, signOut } from 'next-auth/react';
 
 function Nav() {
+    const {data: session} = useSession();
+
     return (
         <div>       
             <nav class="border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-slate-900">
@@ -14,6 +17,11 @@ function Nav() {
                 <a href="/About" class="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-indigo-600">
                     <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-indigo-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
                     <span class="relative text-white transition duration-300 group-hover:text-gray-200 ease">About</span>
+                </a>
+
+                <a href="/Login" class="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-indigo-600">
+                    <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-indigo-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+                    <span class="relative text-white transition duration-300 group-hover:text-gray-200 ease">{session ? <h1 className="text-white">Signed In</h1> : <h1 className="text-white">Sign In</h1>}</span>
                 </a>
 
                 <a href="/Premium" class="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-indigo-600">

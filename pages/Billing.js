@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Nav from '@/components/Nav'
-import handler from './api/hello';
 
 function Billing() {
     const [billType, setBillType] = useState();
