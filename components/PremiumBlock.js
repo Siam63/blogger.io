@@ -59,7 +59,7 @@ function PremiumBlock() {
                         Gold Membership
                     </p>
                     <p class="text-center text-3xl font-bold text-gray-900 dark:text-white">
-                        $10.00 CAD
+                        $10.00 USD
                     </p>
                     <ul class="w-full text-sm">
                         <li class="mb-3 flex items-center text-gray-300">
@@ -108,7 +108,7 @@ function PremiumBlock() {
                         Diamond Membership
                     </p>
                     <p class="text-center text-3xl font-bold text-gray-900 dark:text-white">
-                        $15.00 CAD
+                        $15.00 USD
                     </p>
                     <ul class="w-full text-sm">
                         <li class="mb-3 flex items-center text-gray-300">
@@ -154,8 +154,8 @@ function PremiumBlock() {
                 </div>
             </div>
 
-            <div>
-                <h1>Hello</h1>
+            <div className="mt-5">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScqtV23lJssuuMoly45YkvwTB8csN_0eB03fW6lWYGeDqCcEg/viewform?usp=sf_link">Continue to Checkout</a>
             </div>
         </div>
     )

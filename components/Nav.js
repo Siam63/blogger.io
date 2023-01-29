@@ -21,13 +21,15 @@ function Nav() {
 
                 <a href="/Login" class="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-indigo-600">
                     <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-indigo-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-                    <span class="relative text-white transition duration-300 group-hover:text-gray-200 ease">{session ? <h1 className="text-white">Signed In</h1> : <h1 className="text-white">Sign In</h1>}</span>
+                    <span class="relative text-white transition duration-300 group-hover:text-gray-200 ease">
+                        {session ? <h1 className="text-white">Sign Out</h1> : <h1 className="text-white">Sign In</h1>}
+                    </span>
                 </a>
 
-                <a href="/Premium" class="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-indigo-600">
+                <a href="/Premium" class="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-indigo-600 hover:bg-indigo-700 transition-all duration-300">
                     <div className="flex justify-center items-center">
-                        <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-indigo-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-                        <span class="relative text-orange-600 transition duration-300 group-hover:text-white ease">Premium</span>
+                        <span class="absolute w-64 h-0 transition-all duration-300 origin-center "></span>
+                        <span class="relative text-orange-600 transition duration-300 group-hover:text-orange-400 ease ">Become a Member</span>
                         <AiFillCrown className="ml-2 text-white"/>
                     </div>
                 </a>
